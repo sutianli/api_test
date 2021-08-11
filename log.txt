@@ -1,0 +1,17 @@
+[2021-08-07 17:37:32] INFO [<module>: run.py, 12] ====================== 测试开始 =======================
+[2021-08-09 11:11:31] INFO [run: run.py, 82] ====================测试开始=========================
+[2021-08-09 11:11:31] DEBUG [_new_conn: connectionpool.py, 227] Starting new HTTP connection (1): 127.0.0.1:1888
+[2021-08-09 11:11:31] DEBUG [_make_request: connectionpool.py, 452] http://127.0.0.1:1888 "GET /oreo/personal/crimeInfo?name=%E5%BC%A0%E4%B8%89&idcard=123 HTTP/1.1" 200 324
+[2021-08-09 11:11:31] DEBUG [query_db: db.py, 19] select * from youfenpostinfo where name = '张三'
+[2021-08-09 11:11:31] DEBUG [query_db: db.py, 22] (('123', '张三', '0000', 'ok', '0', None, '测试通过', 'testfine'),)
+[2021-08-09 11:11:31] INFO [test_2_contrast: test_youfen_api.py, 82] check db ok
+[2021-08-09 11:11:31] DEBUG [_new_conn: connectionpool.py, 227] Starting new HTTP connection (1): 127.0.0.1:1888
+[2021-08-09 11:11:31] DEBUG [_make_request: connectionpool.py, 452] http://127.0.0.1:1888 "POST /oreo/personal/portrait/contrast HTTP/1.1" 200 122
+[2021-08-09 11:11:31] INFO [log_case_info: case_log.py, 7] 测试用例：test_2_contrast
+[2021-08-09 11:11:31] INFO [log_case_info: case_log.py, 8] url：http://127.0.0.1:1888/oreo/personal/portrait/contrast
+[2021-08-09 11:11:31] INFO [log_case_info: case_log.py, 9] 请求参数：{"name": "张三", "idcard": "123"}
+[2021-08-09 11:11:31] INFO [log_case_info: case_log.py, 10] 期望结果：{"resCode":"0000","resMsg":"提交成功","data":{"statusCode":"2012","statusMsg":"查询成功","result":{"score":"78"}}}
+[2021-08-09 11:11:31] INFO [log_case_info: case_log.py, 11] 实际结果：{"resCode":"0000","resMsg":"提交成功","data":{"statusCode":"2012","statusMsg":"查询成功","result":{"score":"78"}}}
+[2021-08-09 11:11:31] DEBUG [query_db: db.py, 19] select * from youfenpostinfo where name = '张三'
+[2021-08-09 11:11:31] DEBUG [query_db: db.py, 22] (('123', '张三', '0000', 'ok', '0', None, '测试通过', 'testfine'),)
+[2021-08-09 11:11:31] INFO [run: run.py, 91] ==================测试结束=================================
