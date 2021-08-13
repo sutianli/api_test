@@ -65,13 +65,18 @@ def send_email(report_file):
     msg = MIMEMultipart()
     msg.attach(MIMEText(open(report_file, encoding='utf-8').read(), 'html', 'utf-8'))
 
-    msg['From'] = 'test_results@sina.com'
+    msg['From'] = 'stl298458@163.com'
     msg['To'] = '495225829@qq.com'
     msg['Subject'] = Header(subject, 'utf-8')  # 从配置文件中读取
 
     att1 = MIMEText(open(report_file, 'rb').read(), 'base64', 'utf-8')  # 从配置文件中读取
     att1["Content-Type"] = 'application/octet-stream'
-    att1["Content-Disposition"] = 'attachment; filename="{}"'.format(report_file)  # 参数化一下report_file
+    # 方式一
+    # now_time=time.strftime('%Y-%m-%d %H:%M:%S')
+    # filename='report'+now_time+'.html'
+    # att1["Content-Disposition"] = 'attachment; filename="'+filename
+    #方式二
+    att1["Content-Disposition"] = 'attachment; filename="{}"'.format(os.path.basename(report_file))  # 获取报告文件名字，参数化一下report_file
     msg.attach(att1)
 
     try:
