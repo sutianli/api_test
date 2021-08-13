@@ -42,7 +42,7 @@ smtp_server = 'smtp.163.com'
 smtp_user = 'stl298458@163.com'
 smtp_password = 'GYNECKOIRSAKBXLG'
 sender = smtp_user  # 发件人
-receiver = '<495225829@qq.com>'  # 收件人
+receiver = '495225829@qq.com'  # 收件人
 subject = '接口测试报告'  # 邮件主题
 
 send_email_after_run = True  #配置邮件开关
