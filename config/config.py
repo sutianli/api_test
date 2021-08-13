@@ -45,7 +45,7 @@ sender = smtp_user  # 发件人
 receiver = '495225829@qq.com'  # 收件人
 subject = '接口测试报告'  # 邮件主题
 
-send_email_after_run = False#配置邮件开关
+send_email_after_run = True  #配置邮件开关
 
 # log配置
 logging.basicConfig(level=logging.DEBUG,  # log level
@@ -62,7 +62,10 @@ if __name__ == '__main__':
 Log Level:
 
 CRITICAL: 用于输出严重错误信息
-ERROR: 用于输出错误信息
+ERROR: 用于输出错误信息qa
+
+qw
+
 WARNING: 用于输出警示信息
 INFO: 用于输出一些提升信息
 DEBUG: 用于输出一些调试信息
